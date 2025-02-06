@@ -14,10 +14,10 @@ module.exports = {
   fontsFolder: 'styles/fonts',
   cssFolder: 'static/styles/css',
   jsFolder: 'static/js',
-  host: '0.0.0.0', //'localhost',
+  host: '127.0.0.1', //'localhost',
   port: process.env.PORT || 9090,
   accountId: '',
-  target: 'host:port',
+  target: 'http://127.0.0.1:4545',
   auth: 'user:password',
   cookie: 'key=value'
 };

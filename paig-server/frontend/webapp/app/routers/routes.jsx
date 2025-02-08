@@ -31,6 +31,8 @@ import CMetaData from 'containers/metadata/c_metadata';
 import CReporting from 'containers/reports/c_reporting';
 import CSavedReportsListing from 'containers/reports/c_saved_reports_listing';
 
+import TReport from 'containers/promptfoo/report'
+
 history.listen((location, action) => {
     // scroll to top when route changes
     window.scrollTo(0, 0);
@@ -52,6 +54,7 @@ const Routes = () => (
 		<Route exact path="/" component={RedirectToPath} />
 
         <Route path="/dashboard" name="Dashboard" component={Authorization(CDashboard, [UI_CONSTANTS.DASHBOARD])} />
+        <Route path="/evaluation_report" name="Evaluation Report" component= {TReport}/>
 
         <Route path="/ai_application/create" name="Create Application" component={Authorization(CAIApplicationCreate, [UI_CONSTANTS.APPLICATIONS, UI_CONSTANTS.AI_APPLICATIONS])} />
         <Route path="/ai_application/:id" name="AI Application Details" component={Authorization(CAIApplicationMain, [UI_CONSTANTS.APPLICATIONS, UI_CONSTANTS.AI_APPLICATIONS])} />
